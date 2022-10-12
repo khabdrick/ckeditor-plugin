@@ -29,13 +29,11 @@ class Google extends Plugin {
 
       //Execute a callback function when the button is clicked
       button.on("execute", () => {
-
         const selection = editor.model.document.selection;
         const range = selection.getFirstRange();
 
         for (const item of range.getItems()) {
-		  window.open(`https://www.google.com/search?q=${item.data}`, "_blank");
-
+          window.open(`https://www.google.com/search?q=${item.data}`, "_blank");
         }
       });
 
